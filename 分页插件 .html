@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    *{
+        margin: 0; padding: 0;
+    }
+    div{
+        width: 800px; height: 100px; border: 2px solid black; margin: 100px auto;
+        display: flex;justify-content: center; align-items: center;
+    }
+    p{
+        cursor: pointer;
+        /* cursor:not-allowed; */
+    }
+</style>
+<body>
+    
+
+<div class="div1"></div>
+<div class="div2"></div>
+</body>
+</html>
+
+
+
+<script src="./pagination.js"></script>
+<script>
+//声明全局变量
+   let div1Obj = new Pagination(".div1",{
+       pageTag : {
+        first: '首页',
+        prev: '上一页',
+        list: null,     
+        next: '下一页',
+        last: '末页',
+    },
+    pageInfo : { 
+        pageNum:  11,      
+        pageSize: 10,     
+        totalData: 100000,  
+        //totalPage: 100,   
+    }
+});
+
+let div2Obj = new Pagination(".div2",{
+       pageTag : {
+        first: 'index',
+        prev: 'pre',
+        list: null,     
+        next: 'next',
+        last: '末页',
+    },
+    pageInfo : { 
+        pageNum:  100,      
+        pageSize: 10,     
+        totalData: 1000,  
+        //totalPage: 100,   
+    }
+});
+
+ 
+ 
+
+</script>
